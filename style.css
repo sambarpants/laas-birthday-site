@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 html, body {
     height: 100%;
@@ -29,6 +29,75 @@ html, body {
     position: fixed;
     inset: 0;
     z-index: -1;
+  }
+
+  .butterfly {
+    position: absolute;
+    top: 10%;
+    left: -120px;
+    width: 200px;
+    animation: fly-across 20s cubic-bezier(0.25, 0.25, 0.75, 0.75) infinite;
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  
+  @keyframes fly-across {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    15% {
+      transform: translate(15vw, 3vh) rotate(1deg);
+    }
+    30% {
+      transform: translate(30vw, -2vh) rotate(-1deg);
+    }
+    45% {
+      transform: translate(45vw, 2vh) rotate(2deg);
+    }
+    60% {
+      transform: translate(60vw, 1vh) rotate(0deg);
+    }
+    75% {
+      transform: translate(75vw, -3vh) rotate(-2deg);
+    }
+    90% {
+      transform: translate(90vw, 2vh) rotate(1deg);
+    }
+    100% {
+      transform: translate(100vw, 0) rotate(0deg);
+    }
+  }
+  
+  
+  .butterfly-left {
+    position: absolute;
+    top: 70%;
+    left: 100vw;
+    width: 150px;
+    transform: scaleX(-1);
+    animation: fly-left 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  
+  @keyframes fly-left {
+    0% {
+      transform: translate(0, 0) scaleX(-1) rotate(0deg);
+    }
+    25% {
+      transform: translate(-25vw, -2vh) scaleX(-1) rotate(2deg);
+    }
+    50% {
+      transform: translate(-50vw, 2vh) scaleX(-1) rotate(-1deg);
+    }
+    75% {
+      transform: translate(-75vw, -1vh) scaleX(-1) rotate(1.5deg);
+    }
+    100% {
+      transform: translate(-100vw, 0) scaleX(-1) rotate(0deg);
+    }
   }
   
   .container {
@@ -91,5 +160,4 @@ html, body {
     margin: 20px auto;    /* Center the box horizontally with some margin */
     font-family: 'Quicksand', sans-serif;
   }
-  
   
