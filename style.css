@@ -13,6 +13,7 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Segoe UI', sans-serif;
     color: #4B0082;
     text-align: center;
